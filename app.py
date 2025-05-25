@@ -12,7 +12,8 @@ st.markdown("""
     .block-container { padding-bottom: 9rem; }
     .stChatInput {
         position: fixed !important;
-        bottom: 0; left: 0; width: 100vw !important;
+        bottom: 3.5rem !important;  /* <-- Así la caja y la palomita quedan por encima del logo de Streamlit */
+        left: 0; width: 100vw !important;
         background: #191c24 !important;
         border-top: 2px solid #3b7de9 !important;
         z-index: 9999 !important;
@@ -75,6 +76,7 @@ if prompt:
         except Exception as e:
             st.markdown(f"Error al generar respuesta: {e}")
             st.session_state.messages.append({"role": "assistant", "content": f"Error al generar respuesta: {e}"})
+
 
 
 
