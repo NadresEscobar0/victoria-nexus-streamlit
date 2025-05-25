@@ -9,10 +9,10 @@ st.set_page_config(page_title="VictorIA Nexus", page_icon=":robot_face:", layout
 
 st.markdown("""
     <style>
-    .block-container { padding-bottom: 11rem; }
+    .block-container { padding-bottom: 10rem; }
     .stChatInput {
         position: fixed !important;
-        bottom: 6rem !important;  /* <-- Ahora la caja y la palomita quedan bien arriba del logo de Streamlit */
+        bottom: 4.2rem !important;  /* <-- Ajusta este número si quieres más arriba o más abajo */
         left: 0; width: 100vw !important;
         background: #191c24 !important;
         border-top: 2px solid #3b7de9 !important;
@@ -76,6 +76,7 @@ if prompt:
         except Exception as e:
             st.markdown(f"Error al generar respuesta: {e}")
             st.session_state.messages.append({"role": "assistant", "content": f"Error al generar respuesta: {e}"})
+
 
 
 
